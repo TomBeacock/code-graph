@@ -4,6 +4,7 @@ import { neutral } from "tailwindcss/colors";
 
 export default {
   content: [
+    "./index.html",
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   darkMode: ["selector", "[data-color-scheme=\"dark\"]"],

@@ -1,10 +1,14 @@
-import type { Component } from 'solid-js';
+import { type Component } from "solid-js";
+import ColorSchemeProvider from "./components/color-scheme-provider";
+import Header from "./components/header";
 
 const App: Component = () => {
   return (
-    <div>
-
-    </div>
+    <ColorSchemeProvider>
+      <div>
+        <Header />
+      </div>
+    </ColorSchemeProvider>
   );
 };
 
