@@ -9,6 +9,9 @@ export default {
   ],
   darkMode: ["selector", "[data-color-scheme=\"dark\"]"],
   theme: {
+    fontFamily: {
+      sans: ["Inter", "sans-serif"],
+    },
     extend: {
       colors: {
         transparent: "transparent",
