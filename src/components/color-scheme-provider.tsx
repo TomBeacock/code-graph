@@ -1,4 +1,4 @@
-import { createContext, createEffect, createSignal, type ParentComponent, Setter, useContext, type Component } from "solid-js";
+import { createContext, createEffect, createSignal, type ParentComponent, Setter, useContext } from "solid-js";
 
 const colorSchemes = ["auto", "light", "dark"];
 type ColorScheme = typeof colorSchemes[number];
