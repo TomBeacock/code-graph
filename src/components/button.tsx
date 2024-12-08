@@ -8,7 +8,7 @@ const Button: ParentComponent<ButtonProps> = (props) => {
   const [local, others] = splitProps(props, ["class"]);
   return (
     <button
-      class={`btn${!props.iconOnly ? " px-2" : ""} ${local.class}`}
+      class={`btn${!props.iconOnly ? " px-2" : ""}${local.class !== undefined ? " " + local.class : ""}`}
       {...others}
     >
       {props.children}
