@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-import { neutral } from "tailwindcss/colors";
+import * as colors from "tailwindcss/colors";
 
 export default {
   content: [
@@ -16,8 +16,11 @@ export default {
       colors: {
         transparent: "transparent",
         current: "currentColor",
-        gray: neutral,
-      }
+        gray: colors.zinc,
+      },
+      transitionProperty: {
+        "rect": "left, top, width, height",
+      },
     },
   },
   plugins: [],

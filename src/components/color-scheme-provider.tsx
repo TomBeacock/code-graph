@@ -31,6 +31,6 @@ const ColorSchemeProvider: ParentComponent = (props) => {
   );
 };
 
-export function useColorScheme() { return useContext(ColorSchemeContext); }
-
 export default ColorSchemeProvider;
+
+export const useColorScheme = () => useContext(ColorSchemeContext);
