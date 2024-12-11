@@ -7,7 +7,7 @@ let currentColorScheme: ColorScheme = getStoredColorScheme();
 updateColorScheme();
 
 darkQuery.addEventListener("change", () => {
-  if(currentColorScheme === "auto") {
+  if (currentColorScheme === "auto") {
     updateColorScheme();
   }
 });
@@ -18,7 +18,7 @@ function getStoredColorScheme() {
 }
 
 function updateColorScheme() {
-  if(currentColorScheme === "auto") {
+  if (currentColorScheme === "auto") {
     const preferred = darkQuery.matches ? "dark" : "light";
     document.documentElement.dataset.colorScheme = preferred;
   }
@@ -29,7 +29,7 @@ function updateColorScheme() {
 }
 
 export function setColorScheme(colorScheme: ColorScheme) {
-  if(currentColorScheme === colorScheme) {
+  if (currentColorScheme === colorScheme) {
     return;
   }
   currentColorScheme = colorScheme;

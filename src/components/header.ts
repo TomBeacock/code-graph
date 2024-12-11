@@ -64,7 +64,7 @@ export default function Header() {
   lightButton.appendChild(IconSun(iconProps));
   lightButton.addEventListener("click", () => setColorScheme("light"));
   colorSchemeControls.appendChild(lightButton);
-  
+
   const darkButton = Button(buttonProps);
   darkButton.classList.add(...buttonHoverColors);
   darkButton.appendChild(IconMoon(iconProps));
