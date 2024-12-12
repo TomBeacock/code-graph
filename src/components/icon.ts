@@ -3,6 +3,7 @@ export type IconProps = {
   height?: string,
   fill?: string,
   stroke?: string,
+  strokeWidth?: string,
 }
 
 function Icon(path: string, props: IconProps) {
@@ -12,7 +13,7 @@ function Icon(path: string, props: IconProps) {
   svg.setAttributeNS(null, "viewBox", "0 0 24 24");
   svg.setAttributeNS(null, "fill", props.fill || "none");
   svg.setAttributeNS(null, "stroke", props.stroke || "currentColor");
-  svg.setAttributeNS(null, "stroke-width", "2");
+  svg.setAttributeNS(null, "stroke-width", props.strokeWidth || "2");
   svg.setAttributeNS(null, "stroke-linecap", "round");
   svg.setAttributeNS(null, "stroke-linejoin", "round");
   svg.innerHTML = path;
@@ -55,6 +56,24 @@ export const IconFolderOpen = (props: IconProps) => Icon(
   props
 );
 
+export const IconFunction = (props: IconProps) => Icon(
+  `<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M4 4m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h10.666a2.667 2.667 0 0 1 2.667 2.667v10.666a2.667 2.667 0 0 1 -2.667 2.667h-10.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+  <path d="M9 15.5v.25c0 .69 .56 1.25 1.25 1.25c.71 0 1.304 -.538 1.374 -1.244l.752 -7.512a1.381 1.381 0 0 1 1.374 -1.244c.69 0 1.25 .56 1.25 1.25v.25" />`,
+  props
+);
+
+export const IconListDetails = (props: IconProps) => Icon(
+  `<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M13 5h8" />
+  <path d="M13 9h5" />
+  <path d="M13 15h8" />
+  <path d="M13 19h5" />
+  <path d="M3 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+  <path d="M3 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />`,
+  props
+);
+
 export const IconMoon = (props: IconProps) => Icon(
   `<path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />`,
@@ -67,9 +86,27 @@ export const IconPlayerPlay = (props: IconProps) => Icon(
   props
 );
 
+export const IconSitemap = (props: IconProps) => Icon(
+  `<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M3 15m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+  <path d="M15 15m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+  <path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+  <path d="M6 15v-1a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v1" />
+  <path d="M12 9l0 3" />`,
+  props
+);
+
 export const IconSun = (props: IconProps) => Icon(
   `<path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
   <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />`,
+  props
+);
+
+export const IconTerminal2 = (props: IconProps) => Icon(
+  `<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M8 9l3 3l-3 3" />
+  <path d="M13 15l3 0" />
+  <path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />`,
   props
 );
